@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!--
+  ================== EDIT BEFORE YOU SHIP ==================
+  1. [Your Brand]      -> your business name (appears in header, footer, title)
+  2. [you@brand.com]   -> a dedicated email, NOT your work email
+  3. [booking link]    -> a Cal.com / Calendly link (or keep the mailto)
+  4. Keep your employer's name OFF this page.
+  5. Only claim what you can stand behind in public. Don't reuse
+     anything you built at work or quote internal results.
+  =========================================================
+-->
+
+<title>[Your Brand] — AI security & enterprise readiness</title>
+<meta name="description" content="Independent advisor helping AI startups get through enterprise security and procurement reviews so deals stop stalling." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#0D1826; --ink-2:#122236; --line-d:#21344B;
+    --paper:#F4F6F9; --paper-2:#FFFFFF; --line-l:#E2E7EE;
+    --text-d:#E9EEF5; --mut-d:#8FA1B6;
+    --text-l:#0D1826; --mut-l:#566880;
+    --go:#16B8A6; --go-bright:#34D6C2; --go-dim:rgba(22,184,166,.13);
+    --pending:#E0A23B; --pending-dim:rgba(224,162,59,.15);
+    --maxw:1080px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--ink); color:var(--text-l);
+    font-family:"Inter",system-ui,sans-serif; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Space Grotesk",sans-serif; line-height:1.1; margin:0; letter-spacing:-.01em}
+  p{margin:0}
+  a{color:inherit}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace; font-size:12.5px; letter-spacing:.04em;
+    text-transform:uppercase; color:var(--go); display:inline-block;
+  }
+  .eyebrow.muted{color:var(--mut-d)}
+
+  /* sections */
+  .sec{padding:92px 0}
+  .sec.dark{background:var(--ink); color:var(--text-d)}
+  .sec.light{background:var(--paper); color:var(--text-l)}
+  .sec h2{font-size:clamp(28px,4.2vw,40px); font-weight:600; max-width:18ch}
+  .lead{font-size:18px; max-width:62ch; margin-top:18px}
+  .sec.dark .lead{color:var(--mut-d)}
+  .sec.light .lead{color:var(--mut-l)}
+
+  /* header */
+  header{position:absolute; top:0; left:0; right:0; z-index:5}
+  .bar{display:flex; align-items:center; justify-content:space-between; padding:22px 0}
+  .brand{font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:18px; color:var(--text-d); text-decoration:none; letter-spacing:-.02em}
+  .brand .dot{color:var(--go)}
+  .nav-cta{
+    font-family:"IBM Plex Mono",monospace; font-size:13px; text-decoration:none;
+    color:var(--text-d); border:1px solid var(--line-d); padding:9px 16px; border-radius:999px;
+    transition:border-color .2s, color .2s;
+  }
+  .nav-cta:hover{border-color:var(--go); color:var(--go-bright)}
+
+  /* hero */
+  .hero{
+    background:
+      radial-gradient(1100px 520px at 78% -8%, rgba(22,184,166,.14), transparent 60%),
+      var(--ink);
+    color:var(--text-d); padding:160px 0 110px; position:relative; overflow:hidden;
+  }
+  .hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:54px; align-items:center}
+  .hero h1{font-size:clamp(34px,5.2vw,58px); font-weight:600; margin-top:20px}
+  .hero h1 .hl{color:var(--go-bright)}
+  .hero .lead{color:var(--mut-d); margin-top:24px}
+  .cta-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:34px}
+  .btn{
+    font-family:"IBM Plex Mono",monospace; font-size:14px; text-decoration:none;
+    padding:13px 22px; border-radius:10px; display:inline-flex; align-items:center; gap:9px;
+    transition:transform .15s, background .2s, border-color .2s;
+  }
+  .btn-go{background:var(--go); color:#04211D; font-weight:500}
+  .btn-go:hover{transform:translateY(-2px); background:var(--go-bright)}
+  .btn-ghost{border:1px solid var(--line-d); color:var(--text-d)}
+  .btn-ghost:hover{border-color:var(--go)}
+
+  /* signature: review-status card */
+  .review{
+    background:var(--ink-2); border:1px solid var(--line-d); border-radius:16px;
+    padding:24px; font-family:"IBM Plex Mono",monospace; box-shadow:0 24px 60px rgba(0,0,0,.35);
+  }
+  .review .rh{display:flex; justify-content:space-between; align-items:center; font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--mut-d)}
+  .review .blip{width:8px; height:8px; border-radius:50%; background:var(--go); box-shadow:0 0 0 4px var(--go-dim)}
+  .review ul{list-style:none; padding:0; margin:20px 0 0; font-size:13.5px}
+  .review li{display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px dashed var(--line-d); color:var(--mut-d)}
+  .review li:last-child{border-bottom:0}
+  .review li b{color:var(--text-d); font-weight:500}
+  .chip{font-size:11px; padding:3px 10px; border-radius:999px; letter-spacing:.04em; border:1px solid transparent}
+  .chip.ok{color:var(--go-bright); background:var(--go-dim); border-color:rgba(22,184,166,.35)}
+  .chip.wait{color:var(--pending); background:var(--pending-dim); border-color:rgba(224,162,59,.35)}
+  .verdict{margin-top:18px; display:flex; align-items:center; gap:12px; font-size:13px; color:var(--mut-d)}
+  .verdict .big{font-family:"Space Grotesk",sans-serif; font-size:15px; letter-spacing:.02em}
+  .verdict .from{color:var(--pending)}
+  .verdict .arrow{color:var(--mut-d)}
+  .verdict .to{color:var(--go-bright)}
+
+  /* generic grids */
+  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:48px}
+  .card{
+    background:var(--ink-2); border:1px solid var(--line-d); border-radius:14px; padding:26px;
+  }
+  .sec.light .card{background:var(--paper-2); border-color:var(--line-l)}
+  .card .tag{font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--go); letter-spacing:.03em}
+  .card h3{font-size:20px; font-weight:600; margin-top:12px}
+  .card p{margin-top:10px; font-size:15px}
+  .sec.dark .card p{color:var(--mut-d)}
+  .sec.light .card p{color:var(--mut-l)}
+
+  /* process */
+  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:50px}
+  .step .num{font-family:"IBM Plex Mono",monospace; color:var(--go); font-size:14px; letter-spacing:.05em}
+  .step h3{font-size:19px; font-weight:600; margin-top:14px}
+  .step p{margin-top:9px; font-size:15px; color:var(--mut-l)}
+  .step .state{margin-top:16px}
+
+  /* who */
+  .who-line{font-size:clamp(20px,2.6vw,26px); font-family:"Space Grotesk",sans-serif; font-weight:500; max-width:30ch; line-height:1.3}
+  .who-line .accent{color:var(--go-bright)}
+  .who-note{margin-top:18px; color:var(--mut-d); font-size:15px; max-width:60ch}
+
+  /* why */
+  .why-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:54px; align-items:start; margin-top:14px}
+  .creds{list-style:none; padding:0; margin:26px 0 0; display:grid; gap:0}
+  .creds li{padding:16px 0; border-top:1px solid var(--line-l); display:flex; gap:16px; align-items:baseline}
+  .creds li .k{font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--go); min-width:96px; letter-spacing:.03em}
+  .creds li .v{font-size:15.5px}
+
+  /* contact */
+  .sec.contact{background:linear-gradient(180deg,#0D1826, #0B1622); color:var(--text-d); text-align:center; padding:104px 0}
+  .sec.contact h2{margin:0 auto; text-align:center}
+  .sec.contact .lead{margin:18px auto 0; color:var(--mut-d)}
+  .sec.contact .cta-row{justify-content:center}
+
+  footer{background:var(--ink); color:var(--mut-d); border-top:1px solid var(--line-d); padding:34px 0}
+  .foot{display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; font-size:13.5px}
+  .foot .brand{font-size:16px}
+
+  /* reveal */
+  .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease}
+  .reveal.in{opacity:1; transform:none}
+
+  @media (max-width:860px){
+    .hero-grid,.why-grid{grid-template-columns:1fr; gap:38px}
+    .grid-3,.steps{grid-template-columns:1fr}
+    .hero{padding:138px 0 80px}
+    .sec{padding:70px 0}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1; transform:none; transition:none}
+    .btn,.nav-cta{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">[Your Brand]<span class="dot">.</span></a>
+    <a class="nav-cta" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">// independent advisor · AI security &amp; enterprise readiness</span>
+      <h1>The product is ready. The <span class="hl">security review</span> is what's holding up the deal.</h1>
+      <p class="lead">I help AI startups get through enterprise security and procurement reviews — security questionnaires, SOC&nbsp;2 and ISO expectations, data protection, and AI governance — so your biggest deals stop stalling and start closing.</p>
+      <div class="cta-row">
+        <a class="btn btn-go" href="#contact">Book a call →</a>
+        <a class="btn btn-ghost" href="#process">See how it works</a>
+      </div>
+    </div>
+
+    <!-- signature element: a vendor security review record that clears -->
+    <div class="review reveal" id="review">
+      <div class="rh"><span>Vendor security review</span><span class="blip" aria-hidden="true"></span></div>
+      <ul>
+        <li>Security questionnaire <span class="chip ok">complete</span></li>
+        <li>Data protection &amp; privacy <span class="chip ok">mapped</span></li>
+        <li>AI governance <span class="chip ok">documented</span></li>
+        <li>Evidence &amp; controls <span class="chip ok">ready</span></li>
+      </ul>
+      <div class="verdict">
+        <span class="big">status:</span>
+        <span class="big from" id="statusFrom">BLOCKED</span>
+        <span class="arrow">→</span>
+        <span class="big to" id="statusTo">CLEARED</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="sec light">
+  <div class="wrap">
+    <span class="eyebrow">// the gate</span>
+    <h2 class="reveal" style="margin-top:14px">Where the deal gets stuck</h2>
+    <p class="lead reveal">Your team built something enterprises want. Then their security team sends a long vendor assessment, asks about SOC&nbsp;2 and data handling, and now wants to know how your models are governed. The deal goes quiet for weeks. Most founders are strong on the product and unprepared for this part — and that gap is exactly where deals slip. The good news: it's fixable, and faster than you'd think.</p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec dark" id="services">
+  <div class="wrap">
+    <span class="eyebrow">// what i do</span>
+    <h2 class="reveal" style="margin-top:14px">Three ways to work together</h2>
+    <div class="grid-3">
+      <div class="card reveal">
+        <span class="tag">01 · assess</span>
+        <h3>Readiness Assessment</h3>
+        <p>A fixed-scope review of where you stand against what enterprise buyers actually check. You get a clear gap report and a prioritized roadmap. One to two weeks.</p>
+      </div>
+      <div class="card reveal">
+        <span class="tag">02 · fix</span>
+        <h3>Gap Remediation</h3>
+        <p>Fixed-fee help closing the gaps that matter most — policies, controls, evidence, and the answers reviewers want to see before they sign off.</p>
+      </div>
+      <div class="card reveal">
+        <span class="tag">03 · support</span>
+        <h3>Fractional Advisor</h3>
+        <p>Ongoing help through a live deal or your first enterprise reviews. Your security and privacy lead, without a full-time hire.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec light" id="process">
+  <div class="wrap">
+    <span class="eyebrow">// how it works</span>
+    <h2 class="reveal" style="margin-top:14px">From blocked to deal-ready</h2>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num">01</div>
+        <h3>Assess</h3>
+        <p>Map your gaps against real enterprise and AI-governance requirements — not a generic checklist.</p>
+        <div class="state"><span class="chip wait">under review</span></div>
+      </div>
+      <div class="step reveal">
+        <div class="num">02</div>
+        <h3>Close the gaps</h3>
+        <p>Fix what blocks sign-off, in priority order, with the evidence reviewers ask for.</p>
+        <div class="state"><span class="chip wait">in progress</span></div>
+      </div>
+      <div class="step reveal">
+        <div class="num">03</div>
+        <h3>Stay deal-ready</h3>
+        <p>Repeatable answers and evidence, so the next review takes days instead of weeks.</p>
+        <div class="state"><span class="chip ok">cleared</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="sec dark">
+  <div class="wrap">
+    <span class="eyebrow">// who it's for</span>
+    <p class="who-line reveal" style="margin-top:18px">AI and SaaS startups, <span class="accent">Series&nbsp;A onward</span>, in or near an enterprise deal.</p>
+    <p class="who-note reveal">I focus on software companies — not industrial or operational-technology environments. If a big customer's security team is standing between you and a signature, that's where I help.</p>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec light">
+  <div class="wrap why-grid">
+    <div>
+      <span class="eyebrow">// why me</span>
+      <h2 class="reveal" style="margin-top:14px">I've spent years on the other side of these reviews.</h2>
+      <p class="lead reveal">So I know what a reviewer is really looking for — and what makes them say yes.</p>
+    </div>
+    <ul class="creds reveal">
+      <li><span class="k">background</span><span class="v">20 years in data protection, privacy, and security architecture.</span></li>
+      <li><span class="k">credentials</span><span class="v">Ph.D. in computer science and a U.S. patent in security architecture.</span></li>
+      <li><span class="k">ai security</span><span class="v">The last couple of years deep in AI security and governance — adversarial risks, data and model protection.</span></li>
+      <li><span class="k">frameworks</span><span class="v">EU AI Act, ISO&nbsp;42001, NIST AI RMF, SOC&nbsp;2, ISO&nbsp;27001 / 27701.</span></li>
+      <li><span class="k">buyer side</span><span class="v">Years reviewing vendors for large enterprises — the same reviews you're facing now.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">// get in touch</span>
+    <h2 class="reveal" style="margin-top:14px">Stuck on a security review?</h2>
+    <p class="lead reveal">Tell me where the deal is stuck. If I can help, I'll tell you how. If I can't, I'll point you to someone who can.</p>
+    <div class="cta-row reveal">
+      <a class="btn btn-go" href="mailto:[you@brand.com]">Email me →</a>
+      <a class="btn btn-ghost" href="[booking link]">Book a call</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span class="brand">[Your Brand]<span class="dot" style="color:var(--go)">.</span></span>
+    <span>AI security &amp; enterprise readiness · <span id="yr"></span></span>
+  </div>
+</footer>
+
+<script>
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // scroll reveal
+  var items = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.16});
+    items.forEach(function(el){ io.observe(el); });
+  }
+
+  // hero status: starts BLOCKED, then clears — the whole promise in one motion
+  var from = document.getElementById('statusFrom');
+  var to = document.getElementById('statusTo');
+  if (reduce) {
+    from.style.display = 'none';
+    document.querySelector('.verdict .arrow').style.display = 'none';
+  } else {
+    to.style.opacity = '.25';
+    setTimeout(function(){
+      from.style.transition = 'opacity .5s'; from.style.opacity = '.4';
+      to.style.transition = 'opacity .6s'; to.style.opacity = '1';
+    }, 1100);
+  }
+</script>
+</body>
+</html>
