@@ -142,6 +142,7 @@
   /* ── services ── */
   .sec-services { background: var(--off-white); }
   .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+  .services-grid-2 { grid-template-columns: repeat(2, 1fr); }
   .svc-card {
     background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px;
     display: flex; flex-direction: column;
@@ -177,7 +178,7 @@
 
   /* ── process ── */
   .sec-process { background: var(--white); }
-  .process-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 52px; }
+  .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 52px; }
   .step-num { font-family: "Space Grotesk", sans-serif; font-size: 40px; font-weight: 700; color: var(--teal); opacity: .25; line-height: 1; }
   .step h3 { font-size: 18px; font-weight: 600; color: var(--navy); margin-top: 10px; }
   .step p { font-size: 14.5px; color: var(--muted); margin-top: 8px; line-height: 1.65; }
@@ -202,7 +203,7 @@
 
   @media (max-width: 860px) {
     .hero-grid, .ai-grid, .why-grid { grid-template-columns: 1fr; gap: 40px; }
-    .services-grid, .q-grid, .process-steps { grid-template-columns: 1fr; }
+    .services-grid, .services-grid-2, .q-grid, .process-steps { grid-template-columns: 1fr; }
     .hero { padding: 64px 0 72px; }
     .sec { padding: 72px 0; }
     .nav-links a:not(.nav-cta) { display: none; }
@@ -293,7 +294,7 @@
       <span class="label">// 01 · discover</span>
       <h3 class="reveal" style="font-size:clamp(20px,2.8vw,28px);font-weight:600;color:var(--navy);margin-top:6px;">Find the right problem first</h3>
       <p class="sec-lead reveal">Before you fix your security posture, make sure you're building the right product for the right market. I bring 20 years of enterprise-side experience to your product review.</p>
-      <div class="services-grid reveal" style="grid-template-columns:repeat(2,1fr);margin-top:36px;">
+      <div class="services-grid services-grid-2 reveal" style="margin-top:36px;">
 
         <div class="svc-card">
           <span class="svc-num">product-market fit</span>
@@ -504,7 +505,7 @@
   <div class="wrap">
     <span class="label">// how it works</span>
     <h2 class="reveal">The path from idea to closed deal</h2>
-    <div class="process-steps" style="grid-template-columns:repeat(4,1fr);">
+    <div class="process-steps">
       <div class="step reveal">
         <div class="step-num">01</div>
         <h3>Discover</h3>
